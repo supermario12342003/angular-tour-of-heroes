@@ -3,9 +3,10 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import 'rxjs/add/operator/delay';
 
 import { MessageService } from './message.service';
-import { Hero } from './hero';
+import { Hero, heroes } from './data-model';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -20,7 +21,21 @@ export class HeroService {
     private http: HttpClient,
   ) { }
 
-  /** GET heroes from the server */
+  delayMs = 500;
+
+  // Fake server get; assume nothing can go wrong
+  getHeroes(): Observable<Hero[]> {
+    return of(heroes).delay(this.delayMs); // simulate latency with delay
+  }
+
+  // Fake server update; assume nothing can go wrong
+  updateHero(hero: Hero): Observable<Hero>  {
+    const oldHero = heroes.find(h => h.id === hero.id);
+    const newHero = Object.assign(oldHero, hero); // Demo: mutate cached hero
+    return of(newHero).delay(this.delayMs); // simulate latency with delay
+  }
+
+  /**
   getHeroes (): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
@@ -28,6 +43,7 @@ export class HeroService {
         catchError(this.handleError('getHeroes', []))
       );
   }
+  */
 
   /**
    * Handle Http operation that failed.
@@ -49,7 +65,6 @@ export class HeroService {
     };
   }
 
-  /** GET hero by id. Will 404 if id not found */
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
     return this.http.get<Hero>(url).pipe(
@@ -58,13 +73,15 @@ export class HeroService {
     );
   }
 
-  /** PUT: update the hero on the server */
+  /**
+
   updateHero (hero: Hero): Observable<any> {
     return this.http.put(this.heroesUrl, hero, httpOptions).pipe(
       tap(_ => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>('updateHero'))
     );
   }
+  */
 
   /** POST: add a new hero to the server */
   addHero (hero: Hero): Observable<Hero> {

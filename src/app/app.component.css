@@ -2,22 +2,55 @@
 * @Author: Mengwei Choong
 * @Date:   2018-01-22 18:06:02
 * @Last Modified by:   Mengwei Choong
-* @Last Modified time: 2018-01-22 23:32:11
+* @Last Modified time: 2018-01-23 11:12:02
 */
 /* AppComponent's private CSS styles */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+/* Master Styles */
 h1 {
-  font-size: 1.2em;
-  color: #999;
-  margin-bottom: 0;
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
 }
-h2 {
-  font-size: 2em;
-  margin-top: 0;
-  padding-top: 0;
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
 }
+body {
+  margin: 2em;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* Navigation link styles */
 nav a {
   padding: 5px 10px;
   text-decoration: none;
+  margin-right: 10px;
   margin-top: 10px;
   display: inline-block;
   background-color: #eee;
@@ -32,4 +65,9 @@ nav a:hover {
 }
 nav a.active {
   color: #039be5;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
