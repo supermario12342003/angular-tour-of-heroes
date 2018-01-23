@@ -23,7 +23,7 @@ export class QuestionService {
           {key: 'good',   value: 'Good'},
           {key: 'unproven', value: 'Unproven'}
         ],
-        order: 3
+        order: 4
       }),
 
       new TextboxQuestion({
@@ -35,10 +35,18 @@ export class QuestionService {
       }),
 
       new TextboxQuestion({
+        key: 'lastName',
+        label: 'Last name',
+        value: 'whatever',
+        required: true,
+        order: 2
+      }),
+
+      new TextboxQuestion({
         key: 'emailAddress',
         label: 'Email',
         type: 'email',
-        order: 2
+        order: 3
       })
     ];
 
