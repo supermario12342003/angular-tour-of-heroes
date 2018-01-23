@@ -5,16 +5,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { MessageService }  from './message.service'
-import { QuestionService }  from './question.service'
-import { DynamicFormComponent }         from './dynamic-form/dynamic-form.component';
-import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 
 @NgModule({
-  imports: [ BrowserModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, DynamicFormComponent, DynamicFormQuestionComponent ],
+  imports: [ BrowserModule, AppRoutingModule],
+  declarations: [ AppComponent,],
   bootstrap: [ AppComponent ],
-  providers: [ QuestionService ],
+  providers: [ ],
 })
 export class AppModule {
   constructor() {
