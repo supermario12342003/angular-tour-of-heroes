@@ -28,4 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Mengwei's Journal
-nothing...
+
+steps to run this
+  install npm
+  npm install -g @angular/cli
+  ng serve --open
