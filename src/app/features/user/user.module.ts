@@ -5,6 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserRoutingModule } from './user-routing.module';
 import { UserService }        from './user.service';
 import { SidebarModule }      from 'ng-sidebar';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
@@ -12,7 +14,7 @@ import { SidebarModule }      from 'ng-sidebar';
     UserRoutingModule,
     SidebarModule,
   ],
-  declarations: [DashboardComponent]
+  declarations: [DashboardComponent, LoginComponent, RegisterComponent]
 })
 export class UserModule {
   static forRoot() {
