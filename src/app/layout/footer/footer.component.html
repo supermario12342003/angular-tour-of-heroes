@@ -1,5 +1,5 @@
 <!--Footer-->
-<footer class="page-footer center-on-small-only unique-color-dark pt-0">
+<footer *ngIf="!isAdmin" class="page-footer center-on-small-only unique-color-dark pt-0">
   <!-- Social buttons -->
   <div class="primary-color">
     <div class="container">
@@ -33,5 +33,4 @@
     </div>
   </div>
   <!-- Social buttons -->
-
-    <!--Footer Links-->
+</footer>

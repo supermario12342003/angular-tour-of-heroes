@@ -4,17 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { PagesModule } from './pages/pages.module';
-import { LayoutModule } from './layout/layout.module';
-
 import { UserService } from '@app/features/user/user.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule,
-    PagesModule,
-    LayoutModule,
   ],
   declarations: [],
   exports: [
@@ -22,10 +17,9 @@ import { UserService } from '@app/features/user/user.service';
     FormsModule,
     HttpModule,
     RouterModule,
-    LayoutModule,
   ],
   providers: [
-    //features' services go here
+    //services of lazy-loaded module go here
     UserService,
 
   ]

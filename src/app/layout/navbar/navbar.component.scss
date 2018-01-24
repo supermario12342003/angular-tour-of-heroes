@@ -1,0 +1,16 @@
+/*
+* @Author: Mengwei Choong
+* @Date:   2018-01-23 18:36:25
+* @Last Modified by:   Mengwei Choong
+* @Last Modified time: 2018-01-24 20:47:31
+*/
+
+@import '~sass/_variables';
+
+.top-nav-collapse {
+  background-color: $navbar-background-color;
+}
+
+.navbar {
+  min-height: $navbar-min-height;
+}

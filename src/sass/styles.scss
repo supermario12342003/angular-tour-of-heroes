@@ -1,0 +1,20 @@
+/*
+* @Author: Mengwei Choong
+* @Date:   2018-01-22 18:06:02
+* @Last Modified by:   Mengwei Choong
+* @Last Modified time: 2018-01-24 20:45:39
+*/
+/* You can add global styles to this file, and also import other style files */
+
+@import '~sass/_variables';
+
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+.mt-nav {
+  margin-top: $navbar-min-height + 10px;
+}
