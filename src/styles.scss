@@ -1,0 +1,22 @@
+/*
+* @Author: Mengwei Choong
+* @Date:   2018-01-22 18:06:02
+* @Last Modified by:   Mengwei Choong
+* @Last Modified time: 2018-01-24 11:11:33
+*/
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("/assets/cover.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

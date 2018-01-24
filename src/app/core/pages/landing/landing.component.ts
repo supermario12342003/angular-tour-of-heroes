@@ -4,7 +4,7 @@ import { UserService }       from '@app/features/user';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.less']
+  styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
 
@@ -14,7 +14,11 @@ export class LandingComponent implements OnInit {
   {}
   user: string;
 
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+
   ngOnInit() {
     this.user = this.userService.getUser();
   }
 }
+
