@@ -9,7 +9,7 @@ import { SidebarModule } from 'ng-sidebar';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SidebarModule.forRoot(),
+    SidebarModule,
   ],
   declarations: [DashboardComponent]
 })

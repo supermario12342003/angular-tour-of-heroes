@@ -3,13 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
-import { UserService } from '@app/features/user/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
-    BrowserModule,
-    RouterModule,
   ],
   declarations: [],
   exports: [
@@ -17,11 +14,9 @@ import { UserService } from '@app/features/user/user.service';
     FormsModule,
     HttpModule,
     RouterModule,
+    HttpClientModule,
   ],
   providers: [
-    //services of lazy-loaded module go here
-    UserService,
-
   ]
 })
 export class CoreModule {
