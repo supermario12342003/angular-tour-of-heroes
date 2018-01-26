@@ -29,8 +29,17 @@ app.use(express.static(__dirname + '/dist'));
 // Heroku port
 app.listen(process.env.PORT || 8080);
 
-// For all GET requests, send back index.html
-// so that PathLocationStrategy can be used
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/index.html'));
+console.log("serving")
+
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
+
+
+server.listen(1337);
+
+io.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
 });

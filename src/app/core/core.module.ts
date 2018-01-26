@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from '@app/features/user';
+import { WebsocketService } from './services';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { UserService } from '@app/features/user';
   providers: [
     //all service here
     UserService,
+    WebsocketService
   ]
 })
 export class CoreModule {
