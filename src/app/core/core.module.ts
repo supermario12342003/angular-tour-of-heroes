@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { UserService } from '@app/features/user';
 
 @NgModule({
   imports: [
@@ -17,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [
+    //all service here
+    UserService,
   ]
 })
 export class CoreModule {

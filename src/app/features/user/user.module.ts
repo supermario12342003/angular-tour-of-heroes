@@ -16,7 +16,7 @@ import { TranslateModule } from '@ngx-translate/core';
     SidebarModule,
     TranslateModule,
   ],
-  declarations: [DashboardComponent, LoginComponent, RegisterComponent]
+  declarations: [DashboardComponent, LoginComponent, RegisterComponent],
 })
 export class UserModule {
   static forRoot() {
